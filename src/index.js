@@ -6,15 +6,17 @@ import ErrorBoundary from "./ErrorBoundary";
 import App from "./Basic/App";
 import ParentComponent from "./PureComponentTut/ParentComponent";
 import ParentFwd from "./ForwadingRef/ParentFwd";
+import ParentA from "./ForwadingRef/ParentA";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   // <React.StrictMode>
   <ErrorBoundary>
-    <App />
+    {/* <App /> */}
     {/* <ParentComponent /> */}
     {/* <ParentFwd /> */}
+    <ParentA />
   </ErrorBoundary>
   // </React.StrictMode>
 );
