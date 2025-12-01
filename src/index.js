@@ -4,13 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+// import App from "./NewLearning2025/App";
+import { ThemeProvider } from "./NewLearning2025/Context/themeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.Fragment>
     {/*step1 to connect our react app to browser url by wrapping out our entire app to brwoserrouter api provided by react-router */}
     <BrowserRouter>
-      <App />
+      {/* <App /> */}
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </BrowserRouter>
   </React.Fragment>
 );

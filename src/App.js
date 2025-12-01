@@ -165,7 +165,7 @@ function App() {
           without changing the parent path;it not add child path as index props will share parent path as a route*/}
             <Route index element={<FeaturedProduct />} />
             {/* step1 for nested route create route inside the parent route; it will create path i.e parent/child */}
-            <Route path="featured" element={<FeaturedProduct />} />
+            {/* <Route path="featured" element={<FeaturedProduct />} /> */}
             <Route path="new" element={<NewProduct />} />
           </Route>
 
