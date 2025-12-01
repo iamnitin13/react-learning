@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon redux.js",
-    "dev": "nodemon nested-state.js"
+    "dev": "nodemon nested-state.js",
+    "preview":"nodemon asyncActions.js"
   },
   "keywords": [],
   "author": "",

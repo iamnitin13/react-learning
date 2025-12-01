@@ -5,16 +5,19 @@ const thunkMiddleware = require("redux-thunk").default;
 const createStore = redux.legacy_createStore;
 const applyMiddleware = redux.applyMiddleware;
 
+//types
 const FETCH_USER_REQUEST = "FETCH_USER_REQUEST";
 const FETCH_USER_SUCCESS = "FETCH_USER_SUCCESS";
 const FETCH_USER_FAILURE = "FETCH_USER_FAILURE";
 
+//intial state
 const initialState = {
   loading: true,
   users: [],
   error: "",
 };
 
+//actions
 const fetchUserRequest = () => {
   return {
     type: FETCH_USER_REQUEST,
@@ -35,6 +38,7 @@ const fetchUserFailure = (error) => {
   };
 };
 
+//reducer
 const reducer = (state = initialState, actions) => {
   switch (actions.type) {
     case FETCH_USER_REQUEST:
