@@ -1,14 +1,16 @@
+import { useState } from "react";
 import "./App.css";
-import IceCreamView from "./features/icecream/IceCreamView";
-import CakeView from "./features/cake/CakeView";
-import UserView from "./features/users/UserView";
+import WeatherDisplay from "./components/WeatherDisplay";
+import WeatherSearch from "./components/WeatherSearch";
 
 function App() {
+  const [city, setCity] = useState();
+
   return (
     <div className="App">
-      <CakeView />
-      <IceCreamView />
-      <UserView />
+      <h2>Weather App</h2>
+      <WeatherSearch onSearch={setCity} />
+      <WeatherDisplay city={city} />
     </div>
   );
 }
